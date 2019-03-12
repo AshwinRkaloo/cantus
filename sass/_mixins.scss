@@ -1,0 +1,32 @@
+//BORDER-RADIUS
+@mixin border-radius($rad){
+    -webkit-border-radius:$rad;
+    -moz-border-radius:$rad;
+    -ms-border-radius:$rad;
+    border-radius:$rad;
+}
+
+
+// COLUMN WIDTH
+@mixin colwidth($colwidth){
+    -webkit-column-width: $colwidth;
+    -moz-column-width: $colwidth;
+    -ms-column-width: $colwidth;
+    column-width: $colwidth;
+}
+
+// COLUMN COUNT
+@mixin colcount($colcount){
+    -webkit-column-count: $colcount;
+    -moz-column-count: $colcount;
+    -ms-column-count: $colcount;
+    column-count: $colcount;
+}
+
+// COLUMN GAP
+@mixin colgap($colgap){
+    -webkit-column-count: $colgap;
+    -moz-column-count: $colgap;
+    -ms-column-count: $colgap;
+    column-count: $colgap;
+}
