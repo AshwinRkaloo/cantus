@@ -26,7 +26,7 @@
             border-top:0;
             border-left:0;
             border-right:0;
-            border-bottom:3px solid $border;
+            border-bottom:3px solid map-get($colors, border);
             width:70%;
             @include border-radius(0);
             height:35px;
@@ -36,7 +36,7 @@
             position:relative;
         }
         svg{
-            color:$red;
+            color:map-get($colors, red);
             font-size:16px;
             position:absolute;
             right:0;

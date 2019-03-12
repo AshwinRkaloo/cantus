@@ -2,13 +2,13 @@
 
 #trends{
     h3{
-        color:$grey;
+        color:map-get($colors, grey);
         font-size:28px;
         margin-top:150px;
     }
     span{
         font-family: 'Great Vibes', cursive;
-        color:$red;
+        color:map-get($colors, red);
         text-transform:lowercase;
         font-size:60px;
         font-weight:400;
@@ -20,7 +20,7 @@
             margin-bottom:10px;
         }
         .carousel-control{
-            background: $red;
+            background: map-get($colors, red);
             opacity:1;
             color:#fff;
             border: 0px;
@@ -104,7 +104,7 @@
         }
 
     .separator{
-        border-bottom:1px solid $grey;
+        border-bottom:1px solid map-get($colors, grey);
         width:1200px;
         margin:0 auto;
         opacity:0.4;

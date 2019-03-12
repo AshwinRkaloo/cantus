@@ -32,7 +32,7 @@
             border-top:0;
             border-left:0;
             border-right:0;
-            border-bottom:3px solid $border;
+            border-bottom:3px solid map-get($colors, border);
             margin-bottom:15%;
             background:transparent;
             border-radius:0;
@@ -42,7 +42,7 @@
         }
         .autocomplete-items {
             position: absolute;
-            border: 1px solid $border;
+            border: 1px solid map-get($colors, border);
             border-top: none;
             z-index: 99;
             /*position the autocomplete items to be the same width as the container:*/
@@ -57,7 +57,7 @@
             padding: 10px;
             cursor: pointer;
             background-color: rgba(0,0,0,0.7); 
-            color:$border;
+            color:map-get($colors, border);
         }
         .autocomplete-items div:hover {
            /*when hovering an item:*/
@@ -67,11 +67,11 @@
         }
         .autocomplete-active {
             /*when navigating through the items using the arrow keys:*/
-            background-color:$red !important; 
+            background-color:map-get($colors, red) !important; 
             color: #ffffff; 
         }
         svg{
-            color:$red;
+            color:map-get($colors, red);
             position:absolute;
             font-size:16px;
             right:30%;

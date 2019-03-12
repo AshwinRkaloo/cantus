@@ -1,6 +1,6 @@
 //topbar
 #topbar{
-    background:$red;
+    background:map-get($colors, red);
     nav{
         padding:15px 0;        
         ul{
@@ -48,7 +48,7 @@
         padding:15px 28px;
         background:#fff;
         @include border-radius(3px);
-        color:$red;
+        color:map-get($colors, red);
         text-transform:uppercase;
         text-align:center;
         border:none;

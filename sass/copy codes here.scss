@@ -29,7 +29,7 @@ body,html{
 }
 ::selection {
     color:#fff;
-    background:$red;
+    background:map-get($colors, red);
 }
 h3{
     text-transform:uppercase;
