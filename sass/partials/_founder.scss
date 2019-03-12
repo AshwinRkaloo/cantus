@@ -1,0 +1,795 @@
+
+//BASICS
+body,html{
+    font-family: 'Oswald', sans-serif;
+}
+.wrap{
+    max-width:1200px;
+    margin:0 auto;
+}
+.row{
+    padding:0 !important;
+    margin:0 !important;
+}
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9{
+    padding:0;
+}
+*{
+    box-sizing: border-box;
+}
+::selection {
+    color:#fff;
+    background:map-get($colors, red);
+}
+h3{
+    text-transform:uppercase;
+    font-weight:600;
+}
+ul{
+    margin:0;
+}
+//topbar
+    #topbar{
+        background:map-get($colors, red);
+        nav{
+            padding:15px 0;        
+            ul{
+                margin-top:10px;
+                a li{
+                    display:inline-block;
+                    padding-left:10px;
+                    text-transform: uppercase;
+                    color:#fff;
+                }
+            }
+            .toggle{
+                display:none;
+                svg{
+                    color:#fff;
+                    font-size:24px;
+                }
+            }        
+        }
+        .logo{
+            margin:10px 0;
+        }
+        ul{
+            margin-top:25px;
+            li{
+                display:inline-block;
+                color:#fff;
+                padding:0 10px;
+                font-size:14px;
+                margin-top:-10px;
+                img{
+                    padding-top:10px;
+                }
+            }
+            span{
+                color:#fff;
+                line-height:20px;
+                
+            }
+            .fab{
+                color:#fff;                        
+            }
+        }
+        input[type='button']{
+            padding:15px 28px;
+            background:#fff;
+            @include border-radius(3px);
+            color:map-get($colors, red);
+            text-transform:uppercase;
+            text-align:center;
+            border:none;
+            font-weight:bold;
+        }
+    }
+
+    // HEADER
+    #banner{
+        background:url('../img/header_bg.jpg') 0 0 no-repeat;
+        background-size:cover;
+        .header_text{
+            text-align:center;
+            margin:10% 15% 3%;
+            h2{
+                margin-bottom:100px;
+                color:#fff;
+                font-size:32px;
+                font-family: 'droid_sansregular';
+            }
+            span{
+                font-family: 'Great Vibes', cursive;
+                font-size:68px;
+            }
+        }
+        .autocomplete{
+            /*the container must be positioned relative:*/
+            position: relative;
+            display: inline-block;
+            width:100%;
+            input {
+                border: 1px solid transparent;
+                background-color: #f1f1f1;
+                padding: 10px;
+                font-size: 16px;
+            }
+            input[type=text] {
+                color:#fff;
+                border-top:0;
+                border-left:0;
+                border-right:0;
+                border-bottom:3px solid map-get($colors, border);
+                margin-bottom:15%;
+                background:transparent;
+                border-radius:0;
+                letter-spacing:3px;
+                font-size:18px;
+                width:40%;
+            }
+            .autocomplete-items {
+                position: absolute;
+                border: 1px solid map-get($colors, border);
+                border-top: none;
+                z-index: 99;
+                /*position the autocomplete items to be the same width as the container:*/
+                top: 12%;
+                left: 0;
+                right: 0;
+                width:40%;
+                margin:0 auto;
+                text-align:left;
+            }
+            .autocomplete-items div {
+                padding: 10px;
+                cursor: pointer;
+                background-color: rgba(0,0,0,0.7); 
+                color:map-get($colors, border);
+            }
+            .autocomplete-items div:hover {
+               /*when hovering an item:*/
+               background-color: rgba(135,135,135,0.5);
+               color:#fff; 
+               border:1px solid rgb(135,135,135);
+            }
+            .autocomplete-active {
+                /*when navigating through the items using the arrow keys:*/
+                background-color:map-get($colors, red) !important; 
+                color: #ffffff; 
+            }
+            svg{
+                color:map-get($colors, red);
+                position:absolute;
+                font-size:16px;
+                right:30%;
+                top:-2px;
+            }
+        }   
+    }
+
+// TRENDING ALBUMS
+
+#trends{
+    h3{
+        color:map-get($colors, grey);
+        font-size:28px;
+        margin-top:150px;
+    }
+    span{
+        font-family: 'Great Vibes', cursive;
+        color:map-get($colors, red);
+        text-transform:lowercase;
+        font-size:60px;
+        font-weight:400;
+    }
+
+    /* Carousel Control */
+        .control-box {
+            text-align: right;
+            margin-bottom:10px;
+        }
+        .carousel-control{
+            background: map-get($colors, red);
+            opacity:1;
+            color:#fff;
+            border: 0px;
+            border-radius: 0px;
+            display: inline-block;
+            font-size: 34px;
+            font-weight: 200;
+            line-height: 18px;
+            padding: 4px 11px 0px;
+            position: static;
+            height: 30px;
+            width: 30px;
+        }
+
+        /* Footer */
+        .footer {
+            margin: auto;
+            width: 100%;
+            max-width: 960px;
+            display: block;
+            font-size: 0.69rem;
+        }
+        .footer, .footer a {
+            color: #c9e4f7;
+        }
+        p.right{ 
+            float: right; 
+        }
+
+        //MODIF CSS CAROUSEL
+        .thumbnail{
+            padding:0;
+            border:none;
+        }
+        .thumbnails{
+            margin-left:-32px;
+        }
+        .thumbnails li{
+            margin:0 0 30px 28px;
+        }
+        .span3{
+            width:280px;
+        }
+
+
+        /* Mobile Only */
+        @media (max-width: 767px) {
+            .page-header, .control-box {
+            text-align: center;
+            } 
+        }
+        @media (max-width: 479px) {
+            .caption {
+            word-break: break-all;
+            }
+        }
+
+
+        /* ADD-ON
+        -------------------------------------------------- */
+        body:after{content:"less than 320px";font-size:1rem;font-weight:bold;position:fixed;bottom:0;width:100%;text-align:center;
+            background-color:hsla(1,60%,40%,0.7);color:#fff;height:20px;padding-top:0;margin-left:0;left:0
+        }
+        @media only screen and (min-width:320px)
+            {body:after{content:"320 to 480px";background-color:hsla(90,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
+        @media only screen and (min-width:480px)
+            {body:after{content:"480 to 768px";background-color:hsla(180,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
+        @media only screen and (min-width:768px)
+            {body:after{content:"768 to 980px";background-color:hsla(270,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
+        @media only screen and (min-width:980px)
+            {body:after{content:"980 to 1024px";background-color:hsla(300,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
+        @media only screen and (min-width:1024px)
+        {body:after{content:"1024 and up";background-color:hsla(360,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
+
+        ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+        ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+
+        a, a:focus, a:active, a:hover, object, embed { outline: none; }
+        :-moz-any-link:focus { outline: none; }
+        input::-moz-focus-inner { border: 0; }
+        }
+
+    .separator{
+        border-bottom:1px solid map-get($colors, grey);
+        width:1200px;
+        margin:0 auto;
+        opacity:0.4;
+        padding:20px 0;
+    }
+
+//CONCERT
+#concert{
+    iframe{
+        width:300px;
+        height:300px;
+    }
+    h3{
+        color:map-get($colors, grey);
+        font-size:28px;
+        margin-top:80px;
+    }
+    span{
+        font-family: 'Great Vibes', cursive;
+        color:map-get($colors, red);
+        text-transform:lowercase;
+        font-size:60px;
+        font-weight:400;
+    }
+    .concert_info{
+        padding-left:30px;
+        margin-top:200px;        
+        h4{
+            color:map-get($colors, grey);
+            font-size:18px;            
+        }
+        p{
+            line-height:24px;
+            margin:20px 0 30px;
+        }
+    }
+    input[type='button']{
+        padding:14px 25px;
+        background:map-get($colors, red);
+        @include border-radius(3px);
+        color:#fff;
+        text-transform:uppercase;
+        text-align:center;
+        border:none;
+        font-weight:bold;
+    }
+    .ytp-chrome-top{
+        display:none !important;
+    }
+}
+
+// FOUNDER
+#founder{
+    margin-top:100px;
+    .wrapper{
+        background:map-get($colors, grey) url('../img/founder.jpg') top right no-repeat;
+        padding: 2% 0;        
+    }
+    .founder{
+        margin:15px 0 0 90px;
+        h2{
+            color:#fff;
+            padding:45px 0 10px 10px;
+            text-transform:uppercase;
+        }
+        h4{
+            color:#fff;
+            margin:0 12px 50px;
+            font-size:22px;
+            font-weight:normal;            
+        }
+        span{
+            font-family: 'Great Vibes', cursive;
+            color:#fff;
+            font-size:60px;            
+            font-weight:normal;            
+        }
+        input[type='button']{
+            padding:14px 25px;
+            background:#fff;
+            @include border-radius(3px);
+            color:map-get($colors, red);
+            text-transform:uppercase;
+            text-align:center;
+            border:none;
+            font-weight:bold;
+            margin-bottom:50px;
+        }
+    }    
+}
+
+// POPULAR
+#popular{
+    margin-bottom:100px;
+    h3{
+        color:map-get($colors, grey);
+        font-size:28px;
+        margin-top:120px;
+    }
+    span{
+        font-family: 'Great Vibes', cursive;
+        color:map-get($colors, red);
+        text-transform:lowercase;
+        font-size:60px;
+        font-weight:400;
+    }
+    .listofsong{ 
+        ol{   
+            @include colcount(3);
+            @include colwidth(200px);
+            @include colgap(10px);      
+            margin-top:50px;
+            list-style-position: inside;
+            li{
+            padding:5px 0;
+            list-style-type:number;
+            border-bottom:1px solid rgba(0,0,0,0.1);
+            }
+        }
+    }
+    .myfeed{
+        span a:first-of-type{
+            margin-right:20px;
+        }
+        img{
+            width:47.5%;
+            margin-bottom:20px;
+        }
+    }
+}
+
+//APPLICATION
+#application{
+    .wrapper{
+        background:url('../img/application_bg.png') no-repeat;
+        background-size:cover;
+        .content{
+            margin:6% 0 13%;
+            h2{
+                color:#fff;
+                text-transform:capitalize;
+            }
+            h4{
+                color:#fff;
+                font-size:22px;
+                margin-bottom:50px;
+            }
+            span{
+                margin:0 20px;
+            }
+        }
+    }
+    .newsletter{
+        width: 50%;
+        padding: 3% 0;        
+        input[type='text']{
+            border-top:0;
+            border-left:0;
+            border-right:0;
+            border-bottom:3px solid map-get($colors, border);
+            width:70%;
+            @include border-radius(0);
+            height:35px;
+            box-shadow:none;
+        }
+        span{
+            position:relative;
+        }
+        svg{
+            color:map-get($colors, red);
+            font-size:16px;
+            position:absolute;
+            right:0;
+            top:-5px;
+        }
+        
+    }
+}
+
+// FOOTER
+footer{
+    border-top:2px solid rgba(0,0,0,0.1);
+    margin-bottom:60px;
+    ul{
+        margin:50px 0 20px;
+        li{
+            display:inline-block;
+            text-transform: uppercase;
+            padding-left:30px;
+            color:map-get($colors, grey);
+        }
+        a{
+            text-decoration:none;
+        }
+    }
+    p{
+        span{
+            color:map-get($colors, red);
+            font-size:36px;
+            font-family: 'Great Vibes', cursive;
+        }
+    }
+}
+
+// ----------------------------------------- MEDIA QUERIES -----------------------------------------------//
+
+// TABLET
+@media only screen and(max-width:64em){
+    // TOPBAR
+    #topbar{
+        nav{
+            display:block;
+            .toggle{
+                display:block;
+                text-align:right;
+                margin-right:25px;
+                svg{
+                    color:#fff;
+                    font-size:24px;
+                }
+            }
+            ul{
+                display:none;
+                margin:0;
+                a li{
+                    display:block;
+                    padding:20px 0;
+                    font-size:20px;
+                }
+            }   
+        }
+        .active{
+            display:block;
+        }
+        input[type='button']{
+            margin-bottom:20px;
+        }
+    }
+    .separator{
+        width:90%;
+        margin:0 auto;
+    }
+    #banner .autocomplete input[type='text']{
+        width:80%;
+    }
+    #banner .autocomplete svg{
+        right:50px;
+        top:0;
+    }
+    #banner .autocomplete .autocomplete-items{
+        width:80%;
+        margin-top:15px;
+    }
+
+    // TRENDS
+    #trends{
+        h3{
+            margin-top:80px;
+        }
+        .thumbnail{
+            box-shadow:none;
+        }
+        .thumbnails{
+            margin:0;
+            li{
+                margin:-1px auto;
+                width:25%;
+            }
+        }
+        .control-box{
+            margin-right:60px;
+        }
+    }
+
+    //POPULAR
+    #popular h3{
+        margin-top:30px
+    }
+
+    // FOUNDER
+    #founder .founder{
+        margin:0;
+    }
+
+    // CONCERT
+    #concert{
+        iframe{
+            width:90%;
+            height:500px;
+        }
+        .concert_info{
+            margin-top:80px;
+        }
+    }
+    #popular{
+        margin-bottom:10px;
+        .myfeed img{
+            width:35%;
+        }
+        iframe{
+            width:90%;
+            height:170px;
+        }
+    }
+}
+
+
+// TABLET LANDSCAPE
+@media only screen and (min-width:49em) and (max-width:64em){
+    #topbar{
+        nav{
+            display:inline-block;
+            .toggle{
+                display:none;
+                text-align:right;
+                margin-right:25px;
+                svg{
+                    color:#fff;
+                    font-size:24px;
+                }
+            }
+            ul{
+                display:inline-block;
+                margin:20px 0;
+                a li{
+                    display:inline-block;
+                    padding:0 20px;
+                    font-size:20px;
+                }
+            }   
+        }
+        input[type='button']{
+            margin-bottom:20px;
+        }
+    }
+    #banner .autocomplete svg{
+        right:60px;
+        top:0;
+    }
+
+    #concert .concert_info{
+        margin:120px;
+        padding:0;
+    }
+    #founder .founder{
+        text-align:left;
+        margin-left:30px;
+    }
+}
+
+
+
+// MOBIILE PHONES
+@media only screen and (max-width:40em){
+
+    // TOPBAR
+    #topbar{
+        nav{
+            display:block;
+            .toggle{
+                display:block;
+                text-align:right;
+                margin-right:25px;
+                svg{
+                    color:#fff;
+                    font-size:24px;
+                }
+            }
+            ul{
+                display:none;
+                margin:0;
+                a li{
+                    display:block;
+                    padding:20px 0;
+                    font-size:20px;
+                }
+            }   
+        }
+        .active{
+            display:block;
+        }
+        input[type='button']{
+            margin-bottom:20px;
+        }
+    }
+
+    //banner
+    #banner{
+        background:url("../img/header_bg.jpg") -315px 0 no-repeat;
+        .autocomplete input[type='text']{
+            width:100%;
+            border-top:0;
+        }
+        .autocomplete svg{
+            top:0;
+        }
+        .autocomplete .autocomplete-items{
+            width:100%;
+            margin-top:20px;
+        }
+        .header_text{
+            margin:40px;
+        }
+        .header_text h2{
+            font-size:24px;
+        }
+        .autocomplete svg{
+            right:10px;
+        }
+    }
+     
+    
+    //FOUNDER
+    #founder{
+        margin-top:20px;
+        .wrapper{
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) , url("../img/founder.jpg") top center no-repeat;
+            background-size:cover;
+        }
+        .founder{
+            margin:10px 0;
+            input[type='button']{
+                margin-bottom:5px;
+            }
+            h4{
+                margin:20px;
+                line-height:32px;
+            }
+            h2{
+                padding:10px;
+            }
+        }
+    }
+
+    //POPULAR
+    #popular{
+        margin-bottom:20px;
+        h3{
+            margin:20px 0;
+        }
+        .myfeed span a:first-of-type{
+            margin:5px;
+        }
+    }
+    .myfeed{
+        margin-top:30px;
+    }
+    .separator{
+        width:90%;
+        padding:5px 0;
+    }
+
+    // CONCERT
+    #concert{
+        iframe{
+            width:90%;
+            height:300px;
+        }
+        .concert_info{
+            padding:0;
+            margin:10px 0;
+            h4{
+                margin:20px 0;
+            }
+        }
+        h3{
+            margin-top:30px;
+        }
+    }
+
+    // TRENDS
+    #trends{
+        .control-box{
+            margin:0;
+        }
+        .thumbnails{
+            margin:0;
+            li{
+                margin:5px auto;
+                width:100%;
+            }
+        }
+        h3{
+            margin:20px 0;
+        }
+    }
+
+    // APPLICATION
+    #application{
+        .newsletter{
+            width:100%;
+        }
+        .wrapper .content span{
+            margin:0 5px;
+        }
+        .wrapper .content h4{
+            line-height:32px;
+        }
+    }
+
+    // FOOTER
+
+    footer{
+        margin-bottom:5px;
+        ul{
+            margin-top:10px;
+            li{
+                display:block;
+                padding:10px;
+            }
+        }
+    }
+
+
+} // END MOBIILE PHONES
+
+
+
