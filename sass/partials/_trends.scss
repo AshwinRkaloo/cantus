@@ -59,7 +59,7 @@
             margin-left:-32px;
         }
         .thumbnails li{
-            margin:0 0 30px 28px;
+            // margin:0 0 30px 28px;
         }
         .span3{
             width:280px;
@@ -105,10 +105,14 @@
 
     .separator{
         border-bottom:1px solid map-get($colors, grey);
-        width:1200px;
+        width: 1200px;
         margin:0 auto;
         opacity:0.4;
         padding:20px 0;
+
+        @media only screen and (max-width: 1199px) {
+            display: none;
+        }
     }
 
 

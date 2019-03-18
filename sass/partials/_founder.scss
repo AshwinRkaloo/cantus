@@ -1,6 +1,40 @@
-@media only screen and(max-width:64em){
-    // FOUNDER
-    #founder .founder{
-        margin:0;
+// FOUNDER
+#founder{
+    margin-top:100px;
+    background: map-get($colors, grey);
+    .wrapper{
+        background: url('../img/founder.jpg') top right no-repeat;
+        padding: 2% 0;        
     }
+    .founder{
+        margin:15px 0 0 90px;
+        h2{
+            color:#fff;
+            padding:45px 0 10px 10px;
+            text-transform:uppercase;
+        }
+        h4{
+            color:#fff;
+            margin:0 12px 50px;
+            font-size:22px;
+            font-weight:normal;            
+        }
+        span{
+            font-family: 'Great Vibes', cursive;
+            color:#fff;
+            font-size:60px;            
+            font-weight:normal;            
+        }
+        input[type='button']{
+            padding:14px 25px;
+            background:#fff;
+            @include border-radius(3px);
+            color:map-get (colors, red);
+            text-transform:uppercase;
+            text-align:center;
+            border:none;
+            font-weight:bold;
+            margin-bottom:50px;
+        }
+    }    
 }

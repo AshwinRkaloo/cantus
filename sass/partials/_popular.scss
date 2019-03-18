@@ -1,15 +1,56 @@
-@media only screen and(max-width:64em){
+// POPULAR
+#popular {
+    margin-bottom:100px;
+    h3 {
+        color:map-get($colors, grey);
+        font-size:28px;
+        margin-top:120px;
+    }
+    span {
+        font-family: 'Great Vibes', cursive;
+        color:map-get($colors, red);
+        text-transform:lowercase;
+        font-size:60px;
+        font-weight:400;
+    }
+    .listofsong { 
+        ol {   
+            @include colcount(3);
+            @include colwidth(200px);
+            @include colgap(10px);      
+            margin-top:50px;
+            list-style-position: inside;
+            li {
+            padding:5px 0;
+            list-style-type:number;
+            border-bottom:1px solid rgba(0,0,0,0.1);
+            }
+        }
+    }
+    .myfeed {
+        span a:first-of-type {
+            margin-right:20px;
+        }
+        img {
+            width:47.5%;
+            margin-bottom:20px;
+        }
+    }
+}
+
+
+@media only screen and(max-width:64em) {
     //POPULAR
-    #popular h3{
+    #popular h3 {
         margin-top:30px
     }
 
-    #popular{
+    #popular {
         margin-bottom:10px;
-        .myfeed img{
+        .myfeed img {
             width:35%;
         }
-        iframe{
+        iframe {
             width:90%;
             height:170px;
         }

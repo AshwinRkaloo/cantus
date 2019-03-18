@@ -45,3 +45,10 @@
         
     }
 }
+
+
+@media only screen and (max-width:1199px) {
+    #application .wrapper .content span {
+        display: block;
+    }
+}

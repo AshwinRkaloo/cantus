@@ -1,50 +1,50 @@
 //topbar
-#topbar{
+#topbar {
     background:map-get($colors, red);
-    nav{
+    nav {
         padding:15px 0;        
-        ul{
+        ul {
             margin-top:10px;
-            a li{
+            a li {
                 display:inline-block;
                 padding-left:10px;
                 text-transform: uppercase;
                 color:#fff;
             }
         }
-        .toggle{
+        .toggle {
             display:none;
-            svg{
+            svg {
                 color:#fff;
                 font-size:24px;
             }
         }        
     }
-    .logo{
+    .logo {
         margin:10px 0;
     }
-    ul{
+    ul {
         margin-top:25px;
-        li{
+        li {
             display:inline-block;
             color:#fff;
             padding:0 10px;
             font-size:14px;
             margin-top:-10px;
-            img{
+            img {
                 padding-top:10px;
             }
         }
-        span{
+        span {
             color:#fff;
             line-height:20px;
             
         }
-        .fab{
+        .fab {
             color:#fff;                        
         }
     }
-    input[type='button']{
+    input[type='button'] {
         padding:15px 28px;
         background:#fff;
         @include border-radius(3px);
@@ -57,49 +57,49 @@
 }
 
 
-@media only screen and(max-width:64em){
+@media only screen and(max-width:64em) {
     // TOPBAR
-    #topbar{
-        nav{
+    #topbar {
+        nav {
             display:block;
-            .toggle{
+            .toggle {
                 display:block;
                 text-align:right;
                 margin-right:25px;
-                svg{
+                svg {
                     color:#fff;
                     font-size:24px;
                 }
             }
-            ul{
+            ul {
                 display:none;
                 margin:0;
-                a li{
+                a li {
                     display:block;
                     padding:20px 0;
                     font-size:20px;
                 }
             }   
         }
-        .active{
+        .active {
             display:block;
         }
-        input[type='button']{
+        input[type='button'] {
             margin-bottom:20px;
         }
     }
-    .separator{
+    .separator {
         width:90%;
         margin:0 auto;
     }
-    #banner .autocomplete input[type='text']{
+    #banner .autocomplete input[type='text'] {
         width:80%;
     }
-    #banner .autocomplete svg{
+    #banner .autocomplete svg {
         right:50px;
         top:0;
     }
-    #banner .autocomplete .autocomplete-items{
+    #banner .autocomplete .autocomplete-items {
         width:80%;
         margin-top:15px;
     }

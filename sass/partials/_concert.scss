@@ -1,34 +1,41 @@
 //CONCERT
-#concert{
-    iframe{
+#concert {
+
+    iframe {
         width:300px;
         height:300px;
     }
-    h3{
+
+    h3 {
         color:map-get($colors, grey);
         font-size:28px;
         margin-top:80px;
     }
-    span{
+
+    span {
         font-family: 'Great Vibes', cursive;
         color:map-get($colors, red);
         text-transform:lowercase;
         font-size:60px;
         font-weight:400;
     }
-    .concert_info{
+
+    .concert_info {
         padding-left:30px;
-        margin-top:200px;        
-        h4{
+        margin-top:200px;  
+
+        h4 {
             color:map-get($colors, grey);
             font-size:18px;            
         }
-        p{
+        
+        p {
             line-height:24px;
             margin:20px 0 30px;
         }
     }
-    input[type='button']{
+
+    input[type='button'] {
         padding:14px 25px;
         background:map-get($colors, red);
         @include border-radius(3px);
@@ -38,21 +45,25 @@
         border:none;
         font-weight:bold;
     }
-    .ytp-chrome-top{
+
+    .ytp-chrome-top {
         display:none !important;
     }
 }
 
 
-@media only screen and(max-width:64em){
+@media only screen and(max-width:64em) {
     // CONCERT
-    #concert{
-        iframe{
+    #concert {
+
+        iframe {
             width:90%;
             height:500px;
         }
-        .concert_info{
+
+        .concert_info {
             margin-top:80px;
+            padding-left: 0;
         }
     }
 }
